@@ -1,0 +1,88 @@
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Release\BOI Inventory System.exe.config
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI Inventory System.csproj.ResolveComReference.cache
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmArticles.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmCategories.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmCategoryList.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmArticleList.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.File_Maintenance.frmDivision.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.File_Maintenance.frmDivisionList.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmESL.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmAuditTrail.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmAcccountableOfficers.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmAbout.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmChangePassword.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmUsersList.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmAllInventoryItems.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmAssignmentHistory.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmAssignmentPerEmployee.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmBOIEmployees.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmService.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmServiceList.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmEmployeesList.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmInventoryItems.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmLocation.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmOIC.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmDisposalHistory.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmForDisposal.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmInventoryListforUpdating.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmInventoryPerUser.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmInventorySummary.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmItemsForDisposal.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmItemsForPullOut.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmItemsForRepair.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmPropertyCard.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmPropertyTags.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmPullOut.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmPullOutHistory.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmReceivedItems.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmReceivedItemsList.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmReceivingHistory.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmRepairHIstory.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmSummaryPerEmployee.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frm_PropertyCardsItems.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmExistingItemsList.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmExistingItem.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmGetIARNo.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmItemsList.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmReportViewer.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.File_Maintenance.frmReceivingItem.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.File_Maintenance.frmSupplierCategory.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frm_ModeofAcquisition.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmSupplierList.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmSuppliers.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmItemsHead.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmSubcategories.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmSubcategoryList.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmSystemUserManagement.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmLogIn.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.frmMain.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI_Inventory_System.Properties.Resources.resources
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI Inventory System.csproj.GenerateResource.Cache
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI Inventory System.exe
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI Inventory System.pdb
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Release\BOI Inventory System.exe.manifest
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Release\BOI Inventory System.application
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Release\BOI Inventory System.exe
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Release\BOI Inventory System.pdb
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Release\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Release\CrystalDecisions.ReportSource.dll
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Release\CrystalDecisions.Shared.dll
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Release\CrystalDecisions.Windows.Forms.dll
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Release\FlashControlV71.dll
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Release\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Release\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Release\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Release\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Release\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Release\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Release\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Release\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Release\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Release\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Release\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Release\ShockwaveFlashObjects.dll
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Release\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Release\stdole.dll
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI Inventory System.exe.manifest
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI Inventory System.application
+C:\Users\AJLegaspi\Desktop\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Release\BOI Inventory System.csprojResolveAssemblyReference.cache

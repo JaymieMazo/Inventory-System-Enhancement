@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>\\192.168.3.2\System Installer\BOI-IMS\|\\AJLEGASPI\Shared Files\BOI IMS\|\\AJLEGASPI-HP\Shared Files\BOI IMS\|\\192.168.3.33\Shared Files\BOI IMS\|publish\</PublishUrlHistory>
+    <InstallUrlHistory>\\localhost\BOI IMS\|\\localhost\Program Files\BOI IMS\</InstallUrlHistory>
+    <SupportUrlHistory />
+    <UpdateUrlHistory />
+    <BootstrapperUrlHistory>\\192.168.3.33\Shared Files\BOI IMS\Prerequisites|\\192.168.3.33\Shared Files\BOI IMS|\\192.168.\Shared Files\BOI IMS|\\AJLegaspi\Desktop\Shared Files\BOI IMS\</BootstrapperUrlHistory>
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ReferencePath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\;C:\Program Files\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\</ReferencePath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+</Project>
