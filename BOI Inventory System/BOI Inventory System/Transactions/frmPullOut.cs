@@ -11,13 +11,21 @@ namespace BOI_Inventory_System
     {
         string InvId, DocNo;
         public string End_User_Id,End_User_Unit;
-
+      
         private static string _Remarks;
 
         public static string PullOut_Remarks
         {
             get { return _Remarks; }
             set { _Remarks = value; }
+        }
+
+
+        private static string _selected="";
+
+        public static string selected {
+            get{ return _selected; }
+            set { _selected = value; }
         }
 
         public frmPullOut()
@@ -29,8 +37,6 @@ namespace BOI_Inventory_System
         private void btnFindItem_Click(object sender, EventArgs e)
         {
           GlobalClass.GlobalPullOut_ID = "";
-          
-
 
             if (!GlobalClass.GlobalIsLicense)
             {
@@ -58,8 +64,6 @@ namespace BOI_Inventory_System
         
         }
 
-
-
         private void ShowItemDescription()
         {
             frmItemsForPullOut frm_ItemsList = new frmItemsForPullOut();
@@ -78,7 +82,9 @@ namespace BOI_Inventory_System
 
         private void func_Retrieve_Item()
         {
-            string RetrieveItems = "Select pk_Id,Description,New_Property_No,Serial_No from view_Inventory_Details where pk_Id in(  " + GlobalClass.GlobalPullOut_ID  + ")";
+
+            string RetrieveItems = "Select pk_Id,Description,New_Property_No,Serial_No,[End User Unit] , [End User], fk_End_User_Id from view_Inventory_Details " +
+                                    " where pk_Id in(  " + GlobalClass.GlobalPullOut_ID  + ")";
             //close current connection
             SysCon.CloseConnection();
             //Open connection
@@ -93,6 +99,10 @@ namespace BOI_Inventory_System
                string itemDescription= ItemReader[1].ToString();
                string propertyNo= ItemReader[2].ToString();
                string serialNo= ItemReader[3].ToString();
+                string endUserUnit = ItemReader[4].ToString();
+                string endUser = ItemReader[5].ToString();
+                string endUserId = ItemReader[6].ToString();
+
 
 
                 dgvItems.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -104,10 +114,16 @@ namespace BOI_Inventory_System
                 dgvItems.Rows[CurrentRow].Cells[3].Value = serialNo;
                 dgvItems.Rows[CurrentRow].Cells[4].Value = GlobalClass.Global_Remarks;
                 dgvItems.Rows[CurrentRow].Cells[5].Value = GlobalClass.Global_ReceivedBy;
+                dgvItems.Rows[CurrentRow].Cells[6].Value = endUserUnit;
+                dgvItems.Rows[CurrentRow].Cells[7].Value = endUser;
+                dgvItems.Rows[CurrentRow].Cells[8].Value = endUserId;
 
                 
 
-                if (dgvItems.ColumnCount == 6)
+
+
+
+                if (dgvItems.ColumnCount == 9)
                 {
                     DataGridViewButtonColumn btnRemove = new DataGridViewButtonColumn();
                     btnRemove.HeaderText = "  ";
@@ -132,8 +148,30 @@ namespace BOI_Inventory_System
                 //txtReceiveBy1 = new TextBox(); 
                 //dgvItems.Controls.Add(txtReceiveBy1);
             }
+
+            getAlreadySelectedItem();
         }
 
+
+        private void getAlreadySelectedItem()
+        {
+          
+            int num = 0;
+            selected = "";
+           foreach(DataGridViewRow row in dgvItems.Rows)
+            {
+                if (num == 0)
+                {
+                    selected +=  row.Cells[0].Value ;
+                }
+                else
+                {
+                    selected += "," +  row.Cells[0].Value ;
+
+                }
+                num++;
+            }
+        }
         private void btnAddItem_Click(object sender, EventArgs e)
         {
             //if (txtEndUser.Text == "")
@@ -294,9 +332,8 @@ namespace BOI_Inventory_System
                     using (SqlCommand cmdUpdate = new SqlCommand(UpdateStat, SysCon.SystemConnect))
                     {
                         cmdUpdate.Parameters.Clear();
-
                         cmdUpdate.Parameters.AddWithValue("@pk_Id", row.Cells[0].Value);
-                        cmdUpdate.Parameters.AddWithValue("@fk_OIC", GlobalClass.GlobalOICId);
+                        cmdUpdate.Parameters.AddWithValue("@fk_OIC", GlobalClass.GlobalOICId); //receiving employee
                         cmdUpdate.Parameters.AddWithValue("@Status", "FOR REASSIGNMENT");
 
                         cmdUpdate.ExecuteNonQuery();
@@ -306,15 +343,28 @@ namespace BOI_Inventory_System
             }
 
            
-            string NewPullOutRecord = "Insert into tbl_Pull_Out_Record Values (@fk_Inv_Id, @Pull_Out_From,@End_User_Unit,@ReasonForPullOut,@Remarks,@ReceivedBy,@Date_Pull_Out,@Date_Received,@fk_OIC,@NotedBy,@RRP_No)";
+            string NewPullOutRecord = "Insert into tbl_Pull_Out_Record Values " +
+                "(@fk_Inv_Id, @Pull_Out_From,@End_User_Unit,@ReasonForPullOut,@Remarks,@ReceivedBy,@Date_Pull_Out," +
+                "@Date_Received,@fk_OIC,@NotedBy,@RRP_No)";
             foreach (DataGridViewRow row in dgvItems.Rows)
             {
                 using (SqlCommand cmd = new SqlCommand(NewPullOutRecord, SysCon.SystemConnect))
                 {
                     {
+                       
                         cmd.Parameters.AddWithValue("@fk_Inv_Id", row.Cells[0].Value);
-                        cmd.Parameters.AddWithValue("@Pull_Out_From", txtEndUser.Text);
-                        cmd.Parameters.AddWithValue("@End_User_Unit", End_User_Unit);
+                       
+                        if (!GlobalClass.GlobalIsLicense)
+                        {
+                            cmd.Parameters.AddWithValue("@Pull_Out_From", txtEndUser.Text); //enduser
+                            cmd.Parameters.AddWithValue("@End_User_Unit", End_User_Unit);
+                        }
+                        else 
+                        {
+                            cmd.Parameters.AddWithValue("@End_User_Unit", row.Cells[6].Value);
+                            cmd.Parameters.AddWithValue("@Pull_Out_From",row.Cells[7].Value);  //enduser
+                        }
+
                         cmd.Parameters.AddWithValue("@ReasonForPullOut", cboReason.Text);
                         cmd.Parameters.AddWithValue("@Remarks", cboReason.Text + '/' + row.Cells[4].Value);
                         cmd.Parameters.AddWithValue("@ReceivedBy", row.Cells[5].Value);
@@ -338,14 +388,20 @@ namespace BOI_Inventory_System
                         cmd.Parameters.AddWithValue("@fk_Inv_Id", row.Cells[0].Value);
                         cmd.Parameters.AddWithValue("@Date", dtPullOut.Text);
                         cmd.Parameters.AddWithValue("@Document_No", DocNo);
-                        cmd.Parameters.AddWithValue("@fk_End_User_Id", End_User_Id);
+                        if (!GlobalClass.GlobalIsLicense)
+                        {
+                            cmd.Parameters.AddWithValue("@fk_End_User_Id", End_User_Id);
+
+                        }
+                        else
+                        { 
+                            cmd.Parameters.AddWithValue("@fk_End_User_Id", row.Cells[8].Value);
+                        }
                         cmd.Parameters.AddWithValue("@Status", "Pulled Out");
-                        cmd.Parameters.AddWithValue("@Remarks", cboReason.Text + '-' + PullOut_Remarks);
+                        cmd.Parameters.AddWithValue("@Remarks", cboReason.Text + '-' + GlobalClass.Global_Remarks);
                         cmd.ExecuteNonQuery();
-
-
                     }
-}
+            }
             }
 
             //Audit trail
@@ -590,6 +646,7 @@ namespace BOI_Inventory_System
                 //MessageBox.Show(dgvItems.CurrentRow.Cells[0].Value.ToString());
                 dgvItems.Rows.RemoveAt(dgvItems.CurrentCell.RowIndex);
                 dgvItems.Refresh();
+                getAlreadySelectedItem();
             }
 
 

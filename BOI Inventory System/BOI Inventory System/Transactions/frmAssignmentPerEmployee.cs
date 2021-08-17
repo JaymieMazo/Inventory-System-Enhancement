@@ -403,7 +403,6 @@ namespace BOI_Inventory_System
             SqlCommand AuditTrail = new SqlCommand(user1, SysCon.SystemConnect);
             AuditTrail.ExecuteNonQuery();
 
-
             MessageBox.Show("Item/s has been successfully assigned!", "Item Assignment", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             Doc_Type = cboDocType.Text;

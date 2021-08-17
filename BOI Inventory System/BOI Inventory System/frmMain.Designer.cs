@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnUpload = new System.Windows.Forms.Button();
             this.btnComponents = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -129,6 +130,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.White;
+            this.tabPage2.Controls.Add(this.btnUpload);
             this.tabPage2.Controls.Add(this.btnComponents);
             this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.button1);
@@ -145,6 +147,23 @@
             this.tabPage2.Size = new System.Drawing.Size(1932, 113);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Transactions";
+            // 
+            // btnUpload
+            // 
+            this.btnUpload.BackColor = System.Drawing.Color.Azure;
+            this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpload.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpload.ForeColor = System.Drawing.Color.Teal;
+            this.btnUpload.Image = global::BOI_Inventory_System.Properties.Resources.SecuritySettings;
+            this.btnUpload.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnUpload.Location = new System.Drawing.Point(856, 13);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(96, 86);
+            this.btnUpload.TabIndex = 10;
+            this.btnUpload.Text = "Upload PAR/ICS/RS";
+            this.btnUpload.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnUpload.UseVisualStyleBackColor = false;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // btnComponents
             // 
@@ -175,7 +194,7 @@
             this.button2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Teal;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(855, 13);
+            this.button2.Location = new System.Drawing.Point(958, 13);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(96, 86);
             this.button2.TabIndex = 8;
@@ -1232,7 +1251,7 @@
             this.statusStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.statusStrip1.Location = new System.Drawing.Point(0, 715);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1908, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1370, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -1261,7 +1280,7 @@
             // 
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1908, 737);
+            this.ClientSize = new System.Drawing.Size(1370, 737);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.tabControl2);
@@ -1359,5 +1378,6 @@
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button btnSubscriptions;
         private System.Windows.Forms.Button btnInventoryUpdate;
+        private System.Windows.Forms.Button btnUpload;
     }
 }

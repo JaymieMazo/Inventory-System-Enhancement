@@ -27,7 +27,7 @@ namespace BOI_Inventory_System
 
             func_Load_All_Items();
             func_Load_AllStatus();
-            func_Load_All_ITReceivedBy();
+            func_Load_All_ReceivedBy();
             cboSearchCriteria.Focus();
             cboSearchCriteria.SelectedIndex = 0;
             lblcount.Text = dgvItems.RowCount.ToString();
@@ -37,7 +37,7 @@ namespace BOI_Inventory_System
         private void func_Load_All_Items()
         {
             //Close current connection
-           
+       
             SysCon.CloseConnection();
 
             SysCon.SystemConnect.Open();
@@ -47,16 +47,24 @@ namespace BOI_Inventory_System
             {
                 //MessageBox.Show("Pull out from End user");
 
+
+
                 AllExItems = "Select * from view_Inventory_Details" +
-                                  " where Status = 'Assigned' and  " +
-                                  "fk_End_User_Id = '" + GlobalClass.GlobalEmployeeId + "'";
+                            " where Status = 'Assigned' and  " +
+                            " fk_End_User_Id = '" + GlobalClass.GlobalEmployeeId + "'";
+                           
+
+                if (frmPullOut.selected != "")
+                {
+                    AllExItems += " and pk_id not in ( " + frmPullOut.selected + ")";
+                }
             }
             else
             {
                 //MessageBox.Show("Pull out License");
                 AllExItems = "Select * from view_Inventory_Details" +
                                 " where Status IN('Assigned', 'FOR REASSIGNMENT' , 'FOR ASSIGNMENT' ) and  " +
-                                "Category_Name='EXPENSE' ";
+                                "Category_Name ='EXPENSE' AND Subcategory_Name= 'SUBSCRIPTION EXPENSE'";
             }
 
             SqlCommand cmdInv = new SqlCommand(AllExItems, SysCon.SystemConnect);
@@ -114,9 +122,26 @@ namespace BOI_Inventory_System
             }
         }
 
-        private void func_Load_All_ITReceivedBy()
+        private void func_Load_All_ReceivedBy()
         {
-            string strReceived = "Select full_name from tbl_BOI_Employees where ResignedDate is null AND  fk_Division_Id=39";
+           
+            SysCon.CloseConnection();
+            SysCon.OpenConnection();
+            string userName = GlobalClass.GlobalUser;
+            string userDiv = "Select unit from tbl_System_Users where User_name ='" + userName + "'";
+            SqlCommand cmd = new SqlCommand(userDiv, SysCon.SystemConnect);
+            SqlDataReader readUser = cmd.ExecuteReader();
+            string strReceived = "";
+            if (readUser.Read())
+            {
+              string ReceiverDivision=readUser.GetValue(0).ToString();
+                
+                     strReceived = " SELECT Full_Name FROM tbl_BOI_Employees A" +
+                                   " INNER JOIN tbl_Divisions B ON B.pk_Division_Id = A.fk_Division_Id" +
+                                      " WHERE B.Unit = '" + ReceiverDivision + "' and  A.ResignedDate is null ";
+            }
+          
+            readUser.Close();
             SysCon.CloseConnection();
             SysCon.OpenConnection();
             SqlCommand cmdReceived = new SqlCommand(strReceived, SysCon.SystemConnect);
@@ -223,10 +248,8 @@ namespace BOI_Inventory_System
 
         private void cboStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             if (txtSearch.Text.Trim() == "")
             {
-                MessageBox.Show("status only");
                 if (cboStatus.SelectedIndex != 0)
                 {
                     ((DataTable)dgvItems.DataSource).DefaultView.RowFilter = "Status='" + cboStatus.Text + "'";
@@ -234,8 +257,6 @@ namespace BOI_Inventory_System
             }
             else
             {
-                MessageBox.Show("status and desc");
-
                 if (cboStatus.SelectedIndex != 0)
                 {
                     ((DataTable)dgvItems.DataSource).DefaultView.RowFilter = "Status='" + cboStatus.Text + "'" +
@@ -275,16 +296,23 @@ namespace BOI_Inventory_System
             GlobalClass.GlobalPullOut_ID = "";
             GlobalClass.Global_ReceivedBy = "";
             GlobalClass.Global_Remarks = "";
+
             if (cboReceivedBy.Text == "")
             {
                 MessageBox.Show("Received By is REQUIRED!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else {
                 GlobalClass.Global_ReceivedBy = cboReceivedBy.Text;
-                frmPullOut.PullOut_Remarks = txtRemarks.Text;
+                GlobalClass.Global_Remarks = txtRemarks.Text;
+               
                 Checking_IsSelect();
                 this.Close();
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -66,6 +66,9 @@
             this.SerialNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReceivedBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.enduserunit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EndUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EndUserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -133,7 +136,10 @@
             this.Property_No,
             this.SerialNo,
             this.Remarks,
-            this.ReceivedBy});
+            this.ReceivedBy,
+            this.enduserunit,
+            this.EndUser,
+            this.EndUserID});
             this.dgvItems.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dgvItems.Location = new System.Drawing.Point(8, 63);
             this.dgvItems.Name = "dgvItems";
@@ -469,6 +475,7 @@
             this.pk_Id.HeaderText = "pk_Id";
             this.pk_Id.Name = "pk_Id";
             this.pk_Id.ReadOnly = true;
+            this.pk_Id.Visible = false;
             // 
             // Description
             // 
@@ -502,6 +509,24 @@
             this.ReceivedBy.Name = "ReceivedBy";
             this.ReceivedBy.ReadOnly = true;
             this.ReceivedBy.Width = 150;
+            // 
+            // enduserunit
+            // 
+            this.enduserunit.HeaderText = "End User Unit";
+            this.enduserunit.Name = "enduserunit";
+            this.enduserunit.Visible = false;
+            // 
+            // EndUser
+            // 
+            this.EndUser.HeaderText = "End User";
+            this.EndUser.Name = "EndUser";
+            this.EndUser.Visible = false;
+            // 
+            // EndUserID
+            // 
+            this.EndUserID.HeaderText = "End User ID";
+            this.EndUserID.Name = "EndUserID";
+            this.EndUserID.Visible = false;
             // 
             // frmPullOut
             // 
@@ -565,5 +590,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SerialNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Remarks;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReceivedBy;
+        private System.Windows.Forms.DataGridViewTextBoxColumn enduserunit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EndUser;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EndUserID;
     }
 }

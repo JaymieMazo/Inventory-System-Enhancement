@@ -220,6 +220,7 @@ namespace BOI_Inventory_System
             set { Remarks = value; }
         }
 
+
     }
 
 

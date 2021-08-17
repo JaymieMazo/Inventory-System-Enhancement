@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.IO;
 
 namespace BOI_Inventory_System
 {
@@ -745,6 +747,47 @@ namespace BOI_Inventory_System
         {
             BatchUpdating.frmBatchUpdateInventory frmBatchUpInv = new BatchUpdating.frmBatchUpdateInventory();
             frmBatchUpInv.ShowDialog();
+        }
+   
+
+        private void btnUpload_Click(object sender, EventArgs e)
+        {
+            using (FileDialog dlg = new OpenFileDialog() { Filter = "PDF Documents(*.pdf)| *.pdf", ValidateNames = true })
+            {
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    //DialogResult dialog = MessageBox.Show("Are you sure you want to ");
+
+                    string filename = dlg.FileName;
+                    UploadFile(filename);
+                }
+            
+            }
+        }
+
+        void UploadFile(string filename1)
+        {
+            SysCon.SystemConnect.Close();
+            SysCon.SystemConnect.Open();
+            FileStream flStream = File.OpenRead(filename1);
+            byte[] contents = new byte[flStream.Length];
+            flStream.Read(contents, 0, (int)flStream.Length);
+            flStream.Close();
+            
+
+
+            string qry = "Insert into tbl_FileUpload (pdf_file, updateddate , updatedby) " +
+                         "values( @pdf,   @updateddate,  @updatedby   )";
+            SqlCommand cmd = new SqlCommand(qry, SysCon.SystemConnect);
+
+            cmd.Parameters.AddWithValue("@pdf", contents);
+            cmd.Parameters.AddWithValue("@updateddate", DateTime.Now);
+            cmd.Parameters.AddWithValue("@updatedby", GlobalClass.GlobalUsersId);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Upload done!");
+            SysCon.SystemConnect.Close();
+
+
         }
     }
 }
