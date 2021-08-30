@@ -314,5 +314,31 @@ namespace BOI_Inventory_System
         {
 
         }
+
+        private void btnCheckAll_Click(object sender, EventArgs e)
+        {
+            if (btnCheckAll.Text == "SELECT ALL")
+            {
+                foreach (DataGridViewRow rec in dgvItems.Rows)
+                {
+                    rec.Cells[0].Value = true;
+                }
+
+                btnCheckAll.Text = "UNSELECT ALL";
+            }
+            else
+            {
+                foreach (DataGridViewRow rec in dgvItems.Rows)
+                {
+                rec.Cells[0].Value = false;
+                }
+
+                btnCheckAll.Text = "SELECT ALL";
+            }
+
+
+
+
+        }
     }
 }

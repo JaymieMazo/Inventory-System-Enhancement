@@ -475,7 +475,6 @@
             this.pk_Id.HeaderText = "pk_Id";
             this.pk_Id.Name = "pk_Id";
             this.pk_Id.ReadOnly = true;
-            this.pk_Id.Visible = false;
             // 
             // Description
             // 

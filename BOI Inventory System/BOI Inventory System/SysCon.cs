@@ -15,7 +15,7 @@ namespace BOI_Inventory_System
         //for primary connection
 
         public static string uid = "sa";
-        public static string pwd = "boi123";
+        public static string pwd = "boi_123";
 
        //ACTUAL DATABASE
         //private static string ConStr = "Data Source = BOI-DB1; Initial Catalog= BIS_DBENG; User Id = " + uid + " ; Password = " + pwd + "";

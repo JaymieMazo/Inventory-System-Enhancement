@@ -221,6 +221,14 @@ namespace BOI_Inventory_System
         }
 
 
+        private static int countExpiredLicense = 0;
+
+        public static int GlobalExpiredLicense
+        {
+            get { return countExpiredLicense; }
+            set { countExpiredLicense = value; }
+        }
+
     }
 
 

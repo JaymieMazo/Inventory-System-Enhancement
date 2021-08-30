@@ -25,10 +25,16 @@ namespace BOI_Inventory_System
         private void frmMain_Load(object sender, EventArgs e)
         {  
             //if Failed Authentication , close this form
+
+
+
+
+
             if (!GlobalClass.Authenticated)
             {
                 this.Close();
             }
+
             toolStripStatusLabel2.Text = "Current User: ";
             toolStripStatusLabel1.Text = GlobalClass.GlobalName;
 
@@ -38,6 +44,29 @@ namespace BOI_Inventory_System
             {
                 btnUsers.Enabled = false;
             }
+
+            SysCon.CloseConnection();
+            SysCon.OpenConnection();
+            string qryCountExpired = "EXECUTE dbo.Count_ExpiredLicense ";
+
+            //string qryCountExpired = "Select count(*) from ExpiredLicensesToday";
+            SqlCommand cmdReadExpired = new SqlCommand(qryCountExpired, SysCon.SystemConnect);
+            SqlDataReader readCountExpired = cmdReadExpired.ExecuteReader();
+            readCountExpired.Read();
+            int countExpired = Convert.ToInt32(readCountExpired[0].ToString());
+            if (countExpired!=0)
+            {
+                if (countExpired > 0)
+                {
+                    GlobalClass.GlobalExpiredLicense = countExpired;
+                    frmAutomaticPullOut frmExpired = new frmAutomaticPullOut();
+                    frmExpired.BringToFront();
+                    frmExpired.ShowDialog();
+                    ExpiredLicences frmExpiredView = new ExpiredLicences();
+                    frmExpiredView.ShowDialog();
+                }
+            }
+            SysCon.CloseConnection();
         }
 
         private void frmMain_Load_1(object sender, EventArgs e)
@@ -752,42 +781,10 @@ namespace BOI_Inventory_System
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
-            using (FileDialog dlg = new OpenFileDialog() { Filter = "PDF Documents(*.pdf)| *.pdf", ValidateNames = true })
-            {
-                if (dlg.ShowDialog() == DialogResult.OK)
-                {
-                    //DialogResult dialog = MessageBox.Show("Are you sure you want to ");
-
-                    string filename = dlg.FileName;
-                    UploadFile(filename);
-                }
-            
-            }
+            frmUploadPDF pdf_form = new frmUploadPDF();
+            pdf_form.Show();
         }
 
-        void UploadFile(string filename1)
-        {
-            SysCon.SystemConnect.Close();
-            SysCon.SystemConnect.Open();
-            FileStream flStream = File.OpenRead(filename1);
-            byte[] contents = new byte[flStream.Length];
-            flStream.Read(contents, 0, (int)flStream.Length);
-            flStream.Close();
-            
-
-
-            string qry = "Insert into tbl_FileUpload (pdf_file, updateddate , updatedby) " +
-                         "values( @pdf,   @updateddate,  @updatedby   )";
-            SqlCommand cmd = new SqlCommand(qry, SysCon.SystemConnect);
-
-            cmd.Parameters.AddWithValue("@pdf", contents);
-            cmd.Parameters.AddWithValue("@updateddate", DateTime.Now);
-            cmd.Parameters.AddWithValue("@updatedby", GlobalClass.GlobalUsersId);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Upload done!");
-            SysCon.SystemConnect.Close();
-
-
-        }
+       
     }
 }

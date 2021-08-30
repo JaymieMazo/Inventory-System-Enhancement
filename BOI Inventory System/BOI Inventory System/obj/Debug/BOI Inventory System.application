@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="BOI Inventory System.exe.manifest" size="6052">
+    <dependentAssembly dependencyType="install" codebase="BOI Inventory System.exe.manifest" size="8702">
       <assemblyIdentity name="BOI Inventory System.exe" version="1.0.0.23" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="amd64" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>t+C9kuZ+VypPABfJkPQ3MtNStbCQv3lHT/8b6Ure5WU=</dsig:DigestValue>
+        <dsig:DigestValue>CZeCLbazKbdL7GPne/1rmSo7t8C8vw6Hr4Av5zHR6a0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

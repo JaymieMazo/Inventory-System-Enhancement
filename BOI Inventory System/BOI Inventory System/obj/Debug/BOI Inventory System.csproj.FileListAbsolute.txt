@@ -283,3 +283,14 @@ C:\Users\jdcmazo\Documents\BOI Inventory System\BOI Inventory System\BOI Invento
 C:\Users\jdcmazo\Documents\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Debug\BOI Inventory System.csproj.CopyComplete
 C:\Users\jdcmazo\Documents\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Debug\BOI Inventory System.exe
 C:\Users\jdcmazo\Documents\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Debug\BOI Inventory System.pdb
+C:\Users\jdcmazo\Documents\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\jdcmazo\Documents\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Debug\Interop.FOXITPHANTOMLib.dll
+C:\Users\jdcmazo\Documents\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\jdcmazo\Documents\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\jdcmazo\Documents\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Debug\itextsharp.dll
+C:\Users\jdcmazo\Documents\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Debug\itextsharp.xml
+C:\Users\jdcmazo\Documents\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Debug\Interop.AcroPDFLib.dll
+C:\Users\jdcmazo\Documents\BOI Inventory System\BOI Inventory System\BOI Inventory System\bin\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\jdcmazo\Documents\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Debug\BOI_Inventory_System.frmUploadPDF.resources
+C:\Users\jdcmazo\Documents\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Debug\BOI_Inventory_System.ExpiredLicences.resources
+C:\Users\jdcmazo\Documents\BOI Inventory System\BOI Inventory System\BOI Inventory System\obj\Debug\BOI_Inventory_System.frmAutomaticPullOut.resources

@@ -76,11 +76,17 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -124,6 +130,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BIS_DBENGInventoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ExpiredLicences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExpiredLicences.Designer.cs">
+      <DependentUpon>ExpiredLicences.cs</DependentUpon>
     </Compile>
     <Compile Include="File Maintenance\frmArticles.cs">
       <SubType>Form</SubType>
@@ -184,6 +196,12 @@
     </Compile>
     <Compile Include="frmAbout.Designer.cs">
       <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAutomaticPullOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAutomaticPullOut.Designer.cs">
+      <DependentUpon>frmAutomaticPullOut.cs</DependentUpon>
     </Compile>
     <Compile Include="frmUsersList.cs">
       <SubType>Form</SubType>
@@ -568,6 +586,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="SysCon.cs" />
+    <Compile Include="Transactions\frmUploadPDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions\frmUploadPDF.Designer.cs">
+      <DependentUpon>frmUploadPDF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views.cs" />
     <EmbeddedResource Include="BatchUpdating\frmBatchUpdate.resx">
       <DependentUpon>frmBatchUpdate.cs</DependentUpon>
@@ -580,6 +604,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BatchUpdating\frmBatchUpdate_UnitCost.resx">
       <DependentUpon>frmBatchUpdate_UnitCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpiredLicences.resx">
+      <DependentUpon>ExpiredLicences.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="File Maintenance\frmArticles.resx">
       <DependentUpon>frmArticles.cs</DependentUpon>
@@ -610,6 +637,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAbout.resx">
       <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAutomaticPullOut.resx">
+      <DependentUpon>frmAutomaticPullOut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmChangePassword.resx">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
@@ -825,6 +855,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptInventorySummary.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Transactions\frmUploadPDF.resx">
+      <DependentUpon>frmUploadPDF.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="BIS_DBENGInventoryDataSet.xsc">
       <DependentUpon>BIS_DBENGInventoryDataSet.xsd</DependentUpon>
     </None>
@@ -837,6 +870,7 @@
       <DependentUpon>BIS_DBENGInventoryDataSet.xsd</DependentUpon>
     </None>
     <None Include="BOI Inventory System_TemporaryKey.pfx" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -950,6 +984,32 @@
     <None Include="Resources\AlienAqua FTP.png" />
   </ItemGroup>
   <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="FOXITPHANTOMLib">
+      <Guid>{3A8BD65E-9922-4162-A649-83F2D5326BBE}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
     <COMReference Include="Microsoft.Office.Core">
       <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
       <VersionMajor>2</VersionMajor>

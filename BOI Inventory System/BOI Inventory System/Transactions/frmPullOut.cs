@@ -421,6 +421,7 @@ namespace BOI_Inventory_System
                 }
             }
 
+
             //close connection
             SysCon.SystemConnect.Close();
 
@@ -648,8 +649,6 @@ namespace BOI_Inventory_System
                 dgvItems.Refresh();
                 getAlreadySelectedItem();
             }
-
-
 
         }
 
